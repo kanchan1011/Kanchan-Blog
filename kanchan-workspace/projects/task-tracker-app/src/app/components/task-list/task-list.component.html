@@ -1,1 +1,27 @@
-<p>task-list works!</p>
+<div class="row">
+  <div class="col-md-10">
+    <app-task-form (taskCreated)="addTask($event)"></app-task-form>
+  </div>
+</div>
+
+<div class="row taskList" *ngIf="tasks;">
+  <ul>
+    <h4>List of Tasks</h4>
+    <li *ngFor="let task of tasks">
+      <input
+        type="checkbox"
+        [checked]="task.completed"
+        (change)="toggleTaskCompleted(task)"
+      />
+      <span [style.textDecoration]="task.completed ? 'line-through' : 'none'">
+       <b>{{ task.title |uppercase}}</b> 
+      </span>
+      <span>{{task.description |titlecase}}</span>
+      <button class="btn btn-danger" (click)="deleteTask(task.id)">
+        Delete
+      </button>
+    </li>
+  </ul>
+</div>
+<!-- 
+<ng-template #noTask><span>No Tasks Available</span></ng-template> -->

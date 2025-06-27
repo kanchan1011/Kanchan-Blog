@@ -116,6 +116,7 @@
               }
             ],
             "styles": [
+               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "projects/task-tracker-app/src/styles.css"
             ],
             "scripts": []
