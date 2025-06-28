@@ -206,6 +206,7 @@
               }
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/magenta-violet.css",
               "projects/contact-list/src/styles.css"
             ],
             "scripts": []
@@ -264,6 +265,7 @@
               }
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/magenta-violet.css",
               "projects/contact-list/src/styles.css"
             ],
             "scripts": []

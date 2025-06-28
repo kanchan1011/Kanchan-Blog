@@ -1,0 +1,12 @@
+.add-contact{
+    margin-left: 10px;
+    width: 50%;
+}
+
+input,button{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    border-radius: 20px;
+  
+}
