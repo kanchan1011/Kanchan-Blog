@@ -1,0 +1,10 @@
+# Angular Interview Questions
+1.   How to enable and disable AOT?
+=> AOT(Ahead Of Time) is automatically enabled for production builds.
+Enable AOT-  ng build --aot
+             ng serve --aot
+             ng build --configuration production
+Disable AOT- ng build --aot=false
+             ng serve --aot=false
+
+2. 
