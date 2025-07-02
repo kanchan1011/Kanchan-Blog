@@ -1,0 +1,49 @@
+<div class="contact-list">
+
+  <h2>Search Contact</h2>
+
+  <div class="search-contact">
+      <mat-form-field class="search-width">
+    <mat-label>Search Contact</mat-label>
+    <input matInput placeholder="Search by name or phone or email..." [(ngModel)]="searchContact">
+  </mat-form-field>
+  
+
+  <!-- <mat-paginator [length]="100"
+              [pageSize]="10"
+              [pageSizeOptions]="[5, 10, 25, 100]"
+              aria-label="Select page" (change)="changePageSize(pageSize)" >
+</mat-paginator> -->
+   <label for="pageSize">Items per page:</label>
+  <select [(ngModel)]="pageSize" (change)="changePageSize(pageSize)">
+    <option [value]="5">5</option>
+    <option [value]="10">10</option>
+  </select>
+ 
+<button routerLink="/add-contact">Add New</button>
+
+</div>
+
+  <mat-list>
+    <mat-divider></mat-divider>
+    <div mat-subheader>Contact List</div>
+    @for (contact of filteredContacts; track contact) {
+    <mat-list-item>
+      <mat-icon matListItemIcon>person</mat-icon>
+      <div matListItemTitle>Name: <strong> {{contact.name}} </strong></div>
+       <div matListItemLine>Email: <strong>{{contact.email}}</strong></div>
+      <div matListItemLine>Phone: <strong>{{contact.phone}}</strong></div>
+    </mat-list-item>
+    }
+  </mat-list>
+
+  <mat-divider></mat-divider>
+</div>
+
+<div *ngIf="totalPages > 1">
+  <button *ngFor="let page of pages"
+          (click)="changePage(page)"
+          [disabled]="currentPage === page">
+    {{ page }}
+  </button>
+</div>

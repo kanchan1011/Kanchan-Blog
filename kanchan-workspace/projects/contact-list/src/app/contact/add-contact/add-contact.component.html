@@ -1,0 +1,15 @@
+<div class="add-contact">
+<h3>Add Contact</h3>
+<form (ngSubmit)="addContact()" #contactForm="ngForm">
+  <input type="text" placeholder="Name" [(ngModel)]="newContact.name" name="name" required /> <br>
+  <input type="email" placeholder="Email" [(ngModel)]="newContact.email" name="email" required />
+<br>  <input type="text" placeholder="Phone" [(ngModel)]="newContact.phone" name="phone" required />
+  <br><button type="submit" [disabled]="!contactForm.form.valid">Add</button>
+</form>
+
+<hr />
+
+
+<button routerLink="/contact">See Contact</button>
+
+</div>

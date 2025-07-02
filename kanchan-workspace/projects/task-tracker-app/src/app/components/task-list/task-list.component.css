@@ -1,0 +1,21 @@
+.btn{
+ margin-left: 5px;
+    margin-top: 5px;
+}
+li{
+    list-style-type: none;
+}
+h4{
+    margin-top: 10px;
+}
+.row,span{
+    margin-top: 5px;
+    margin-left: 10px;
+}
+.taskList{
+    border-radius: 10px;
+    width: 50%;
+    border: 1px solid;
+    margin-top: 20px;
+    margin-left: 10px;
+}

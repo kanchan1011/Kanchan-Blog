@@ -1,0 +1,3 @@
+Bootstrap is added for Task Tracker
+Normal CSS style added for Note-App
+Target to complete 10 small app in angular

@@ -1,0 +1,56 @@
+.noteApp {
+  text-align: center;
+  border: 1px solid rgb(36, 65, 94);
+  border-radius: 10px;
+  border-style: groove;
+  width: 50%;
+  margin-top: 20px;
+  margin-left: 20px;
+  padding: 10px;
+}
+label {
+  font-size: larger;
+  font-weight: bold;
+  font-style: italic;
+}
+input {
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.btnAdd {
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 5px;
+  background-color: green;
+  color: white;
+  border-radius: 10px;
+}
+.btnCancel {
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 5px;
+  background-color: grey;
+  color: white;
+  border-radius: 10px;
+}
+.btnFav {
+  margin-left: 5px;
+  margin-right: 7px;
+  padding: 5px;
+  border-radius: 10px;
+  font-weight: bold;
+  color: red;
+  font-size: 30px;
+}
+.btnDelete {
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 5px;
+  background-color: red;
+  color: white;
+  border-radius: 10px;
+}
+li {
+  list-style: none;
+}

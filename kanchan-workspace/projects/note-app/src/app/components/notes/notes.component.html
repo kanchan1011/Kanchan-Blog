@@ -1,0 +1,21 @@
+<div class="noteApp">
+    <h2>Note App</h2>
+
+    <label for="newNote">  Enter Note    </label>
+    <input type="text" [(ngModel)]="newNote" placeholder="Enter your note here.." >
+
+    <button class="btnAdd" (click)="editingNoteId? updateNote():addNote()">{{ editingNoteId? 'Update Note':'Add Note'}}</button>
+    <button class="btnCancel" *ngIf="editingNoteId" (click)="cancelEdit()">Cancel</button>
+
+    <div class="list">
+        <ul>
+            <li *ngFor="let note of getNotes;">
+                <span>{{note.content}}</span>
+                 <button class="btnAdd" (click)="editNote(note)">Edit</button>
+                <button class="btnDelete" (click)="deleteNote(note.id)">Delete</button>
+                <span class="btnFav" (click)="toggleFavorite(note)">{{note.favorite? '&#10084;' :'🤍'}}</span>
+               
+            </li>
+        </ul>
+    </div>
+</div>
