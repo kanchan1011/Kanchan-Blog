@@ -33,6 +33,7 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "/https://github.com/kanchan1011/Kanchan-Blog.git/note-app/",
               "budgets": [
                 {
                   "type": "initial",
@@ -123,6 +124,8 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "/https://github.com/kanchan1011/Kanchan-Blog.git/task-tracker-app/",
+            
               "budgets": [
                 {
                   "type": "initial",
@@ -213,6 +216,8 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "/https://github.com/kanchan1011/Kanchan-Blog.git/contact-list/",
+            
               "budgets": [
                 {
                   "type": "initial",

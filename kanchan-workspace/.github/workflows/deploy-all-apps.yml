@@ -1,0 +1,44 @@
+name: Deploy Angular Apps to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Build task-tracker-app
+        run: npm run ng -- build task-tracker-app --configuration production --base-href=/https://github.com/kanchan1011/Kanchan-Blog.git/task-tracker-app/
+
+      - name: Build note-app
+        run: npm run ng -- build note-app --configuration production --base-href=/https://github.com/kanchan1011/Kanchan-Blog.git/note-app/
+
+      - name: Build contact-list
+        run: npm run ng -- build contact-list --configuration production --base-href=/https://github.com/kanchan1011/Kanchan-Blog.git/contact-list/
+
+      - name: Prepare Deploy Directory
+        run: |
+          mkdir gh-pages
+          cp -r dist/task-tracker gh-pages/task-tracker-app
+          cp -r dist/note-app gh-pages/note-app
+          cp -r dist/contact-app gh-pages/contact-list
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: gh-pages
