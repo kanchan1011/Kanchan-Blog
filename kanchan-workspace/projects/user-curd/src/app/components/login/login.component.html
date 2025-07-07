@@ -1,0 +1,19 @@
+<div class="row mt-5">
+    <div class="col-md-10">
+        <div class=" card d-flex align-items-center gap-2">
+    <h2>Login</h2>
+    <form (ngSubmit)="login()">
+        <div> 
+        <label class="form-label mb-0">Username</label>
+        <input type="text" class="form-control w-auto" [(ngModel)]="username" name="username" required>
+        </div>
+        <div>
+         <label class="form-label mb-0">Password</label>
+        <input type="password" class="form-control w-auto" [(ngModel)]="password" name="password" required>
+        </div>
+        <button class="btn btn-primary mt-4">Login</button>
+        <button class="btn btn-danger mt-4">Cancel</button>
+    </form>
+    </div>
+    </div>
+</div>
