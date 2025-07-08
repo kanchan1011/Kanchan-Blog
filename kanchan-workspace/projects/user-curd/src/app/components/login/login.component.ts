@@ -7,24 +7,25 @@ import { FormsModule } from '@angular/forms';
   selector: 'app-login',
   imports: [FormsModule],
   templateUrl: './login.component.html',
-  styleUrl: './login.component.css'
+  styleUrl: './login.component.css',
 })
 export class LoginComponent {
-username='';
-password='';
+  username = '';
+  password = '';
+  isLogin: boolean = false;
 
-constructor(private auth:AuthService,private router:Router){}
+  constructor(private auth: AuthService, private router: Router) {}
 
-login(){
-  const success=this.auth.login(this.username,this.password);
-  if(success){
-    //console.log("data: ",this.username,this.password)
-    console.log('Login success..')
-    localStorage.setItem('login-data',`${this.username} ${this.password}`)
-    this.router.navigate(['user-list']);
+  login() {
+    const success = this.auth.login(this.username, this.password);
+    if (success) {
+      //console.log("data: ",this.username,this.password)
+      console.log('Login success..');
+      localStorage.setItem('login-data', `${this.username} ${this.password}`);
+      this.isLogin = true;
+      this.router.navigate(['user-list']);
+    } else {
+      alert('Invalid credentials.');
+    }
   }
-  else{
-    alert('Invalid credentials.')
-  }
-}
 }

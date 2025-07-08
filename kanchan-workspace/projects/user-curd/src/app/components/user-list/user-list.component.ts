@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-user-list',
@@ -7,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrl: './user-list.component.css'
 })
 export class UserListComponent {
+//isLogin:boolean=false;
 
+
+constructor(private authService:AuthService){}
+
+ngOnInit(){
+  
+}
 }
