@@ -1,1 +1,25 @@
-<p>user-list works!</p>
+<div class="row">
+  <h2>User List</h2>
+  <table class="table table-striped">
+    <caption>
+      User List
+    </caption>
+    <thead>
+      <tr>
+        <th *ngFor="let h of headers">{{ h | titlecase }}</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{ user.id }}</td>
+        <td>{{ user.username }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.phone }}</td>
+        <td>{{ user.address }}</td>
+        <td><button class="btn btn-success" (click)="editUser(user.id)">Edit</button> <button class="btn btn-info" (click)="viewUser(user.id)">View</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
