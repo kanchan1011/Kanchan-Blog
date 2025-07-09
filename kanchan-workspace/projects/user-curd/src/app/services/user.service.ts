@@ -47,4 +47,13 @@ export class UserService {
   saveUsers(users: User[]) {
     localStorage.setItem(this.storageKey, JSON.stringify(users));
   }
+
+  addUser(newUser: User) {
+    const users = this.getUsers();
+    const newId =
+      users.length > 0 ? Math.max(...users.map((u) => u.id)) + 1 : 1;
+    newUser.id = newId;
+    users.push(newUser);
+    localStorage.setItem(this.storageKey, JSON.stringify(users));
+  }
 }

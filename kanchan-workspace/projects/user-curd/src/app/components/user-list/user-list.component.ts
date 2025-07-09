@@ -30,4 +30,8 @@ export class UserListComponent {
   editUser(id: number) {
     this.router.navigate(['/user-edit', id]);
   }
+
+  addUser() {
+    this.router.navigate(['/user-add']);
+  }
 }

@@ -1,7 +1,7 @@
 <div class="row">
-  <h2>Edit User</h2>
+  <h2>Add User</h2>
   <div class="col-md-12">
-    <form *ngIf="user" (ngSubmit)="saveUser()">
+    <form  (ngSubmit)="addUser()">
       <div class="form-label">
         <label>Username: </label>
         <input type="text" class="form-control" name="username" [(ngModel)]="user.username"/>
